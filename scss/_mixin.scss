@@ -1,0 +1,70 @@
+@mixin bg-img($url) {
+    background: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin fonts($fFamily,$fWeight,$fSize,$letSpac){
+    font-family: $fFamily; //"ProximaNova";
+    font-weight: $fWeight; //400;
+    font-size: $fSize; //24px;
+    letter-spacing: $letSpac; //normal;
+}
+
+@mixin title($color) {
+    color: $color;
+    font-family: "ProximaNova";
+    font-size: 36px;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+@mixin titleIcon($icon) {
+    content: url($icon);
+    top: -76px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+@mixin flex ($justCont) {
+    display: flex;
+    justify-content: $justCont;
+}
+
+@mixin button ($padding, $color, $bordColor) {
+    padding: $padding;
+    color: $color;
+    font-family: "PT Sans";
+    font-size: 20px;
+    letter-spacing: normal;
+    font-style: italic;
+    text-align: center;
+    line-height: normal;
+    border: 2px solid $bordColor;
+    transition: all 0.3s linear;
+    display: block;
+}
+
+@mixin hover-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@mixin active-button {
+    transform: scale(0.9);
+    transition: all 0.3s linear;
+}
+
+@mixin hover-icon {
+    transform: scale(1.1);
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+
+@mixin active-icon {
+    transform: scale(0.9);
+    transition: all 0.3s linear;
+}
