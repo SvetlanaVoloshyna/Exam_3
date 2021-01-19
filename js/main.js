@@ -84,15 +84,16 @@ window.onload = function () {
 
     let btnMore = $('#more');
     let aboutText = $('.about-text');
+    let smallScreen = 568;
 
-    btnMore.html('More');
-    aboutText.addClass('hide');
+    if (window.innerWidth < smallScreen) {
+        aboutText.addClass('hide');
+    }
 
     btnMore.click(function () {
-        // e.preventDefault();
         let width = window.innerWidth;
-        console.log(width);
-        if (width < 568) {
+        // console.log(width);
+        if (width < smallScreen) {
             if (aboutText.hasClass('hide')) {
                 aboutText.removeClass('hide');
                 btnMore.html('See Less');
@@ -113,7 +114,7 @@ window.onload = function () {
         // console.log(width);
         let btnMore = $('#more');
         let aboutText = $('.about-text');
-        if (width < 568) {
+        if (width < smallScreen) {
             btnMore.html('See More');
             aboutText.addClass('hide');
 
